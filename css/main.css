@@ -1,0 +1,147 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+body{
+    background-color: rgb(71, 67, 64);
+}
+.noscroll{
+    overflow: hidden;
+}
+.container{
+    background-color: white;
+    padding: 50px 0;
+    display: flex;
+    justify-content: center;
+    transform-origin: 0 0;
+    transition: 1s ease;
+}
+
+main{
+    flex-basis: 60%;
+}
+
+p:first-of-type{
+    color: #98988f;
+    margin-top: -5px;
+}
+
+p:nth-of-type(2){
+    margin: 20px 0;
+}
+img{
+    margin: 5px 0;
+    width: 100%;
+}
+
+/* nav cercle */
+.nav-cercle-container{
+    position: fixed;
+    left: -90px;
+    top: -90px;
+    z-index: 4;
+    transition: 1s ease;
+
+}
+
+.nav-cercle{
+    height: 180px;
+    width: 180px;
+    border-radius: 50%;
+    background-color: orangered;
+    position: relative;
+    transition: 1s ease;
+}
+
+.nav-cercle i:first-of-type{
+    position: absolute;
+    right: 35px;
+    bottom: 35px;
+}
+
+.nav-cercle i:nth-of-type(2){
+    position: absolute;
+    left: 35px;
+    bottom: 35px;
+}
+
+.rotated{
+    transform: rotate(-90deg);
+}
+
+.rotated-page{
+    transform: rotate(-20deg);
+}
+
+/* nav elements */
+
+ul{
+    list-style: none;
+    position: fixed;
+    z-index: 10;
+    left: -100px;
+    top: 390px;
+    transition: 1s ease;
+}
+li{
+    position: relative;
+    margin: 15px;
+    color: white;
+    font-size: 25px;
+    transition: .3s linear .3s;
+}
+li i{
+    position: absolute;
+    left: -30px;
+    top: 1px;
+}
+li:hover{
+    color: orangered;
+    transform: scale(1.01);
+}
+.slided-nav{
+    left: 30px;
+    transition: .2s ease;
+}
+.home-effect{
+    transition: .2s ease;
+}
+.home-effect:hover{
+    transform: scale(1.04);
+}
+.about-slide{
+    transform: translateX(8px);
+    transition: .2s ease;
+}
+.about-slide:hover{
+    transform: translateX(8px) scale(1.04);
+}
+.contact-slide{
+    transform: translateX(16px);
+    transition: .2s ease;
+}
+.contact-slide:hover{
+    transform: translateX(16px) scale(1.04);
+}
+
+
+
+
+/* small screens */
+
+@media screen and (max-width: 800px){
+    .nav-cercle{
+        height: 140px;
+        width: 140px;
+    }
+    .nav-cercle-container{
+        left: -70px;
+        top: -70px;
+    }
+    .nav-cercle i{
+        font-size: 30px;
+    }
+}
